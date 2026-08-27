@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>CORVO — Oslo Design Fair 2026</title>
+    <meta
+      name="description"
+      content="CORVO at Oslo Design Fair 2026. Exclusive bespoke rugs, crafted in Portugal. Hall D, stand D02-24, NOVA Spektrum, Lillestrøm."
+    />
+    <meta property="og:title" content="CORVO — Oslo Design Fair 2026" />
+    <meta
+      property="og:description"
+      content="An atelier where every idea takes shape, texture, and meaning. Meet CORVO at Oslo Design Fair."
+    />
+    <meta property="og:image" content="https://oslo.corvorugs.com/assets/img/verdant.jpg" />
+    <meta property="og:url" content="https://oslo.corvorugs.com/" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="lead-overlay" id="lead-overlay" role="dialog" aria-modal="true" aria-labelledby="lead-title" hidden>
+      <form class="lead-card" id="lead-form" novalidate>
+        <span class="brand">CORVO</span>
+        <h2 id="lead-title">Welcome</h2>
+        <p class="intro">Leave an email or a phone number and we will be in touch from the stand.</p>
+
+        <div class="field">
+          <label for="lead-email">Email</label>
+          <input id="lead-email" name="email" type="email" autocomplete="email" placeholder="name@studio.com" />
+        </div>
+
+        <div class="field">
+          <label for="lead-phone">Phone</label>
+          <div class="phone-row">
+            <select id="lead-code" name="countryCode" aria-label="Country code">
+              <option value="+47" selected>NO +47</option>
+              <option value="+351">PT +351</option>
+              <option value="+46">SE +46</option>
+              <option value="+45">DK +45</option>
+              <option value="+358">FI +358</option>
+              <option value="+49">DE +49</option>
+              <option value="+44">GB +44</option>
+              <option value="+33">FR +33</option>
+              <option value="+31">NL +31</option>
+              <option value="+32">BE +32</option>
+              <option value="+41">CH +41</option>
+              <option value="+39">IT +39</option>
+              <option value="+34">ES +34</option>
+              <option value="+1">US +1</option>
+              <option value="+81">JP +81</option>
+              <option value="+971">AE +971</option>
+            </select>
+            <input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="912 34 567" />
+          </div>
+        </div>
+
+        <p class="form-note">Email or phone is enough. We use this only to follow up about CORVO at Oslo Design Fair.</p>
+        <p class="form-error" id="lead-error" role="alert"></p>
+
+        <div class="lead-actions">
+          <button class="btn btn-solid" type="submit">Share details</button>
+          <button class="btn btn-ghost" type="button" id="lead-skip">Continue</button>
+        </div>
+      </form>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#top">CORVO</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#atelier">The atelier</a>
+        <a href="#exposition">Exposition</a>
+      </nav>
+      <a class="btn header-cta js-cal" href="https://cal.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+    </header>
+
+    <a class="mobile-cta js-cal" href="https://cal.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+
+    <main id="top">
+      <section class="hero" aria-label="CORVO at Oslo Design Fair">
+        <div class="hero-slides" id="hero-slides">
+          <img class="is-active" src="assets/img/hero.jpg" alt="Hands finishing a CORVO exclusive bespoke rug in the atelier" />
+          <img src="assets/img/hero-landscape.jpg" alt="Verdant rug draped over a branch in a golden landscape" />
+          <img src="assets/img/atelier.jpg" alt="A visitor standing before a sculptural CORVO rug" />
+        </div>
+        <div class="hero-veil"></div>
+        <div class="hero-inner">
+          <p class="kicker hero-kicker">Oslo Design Fair 2026</p>
+          <h1>CORVO</h1>
+          <p class="hero-lead">
+            CORVO is more than a rug brand — it is an atelier where every idea takes shape, texture, and meaning.
+          </p>
+          <div class="hero-meta">
+            <span>31 Aug – 2 Sept</span>
+            <span>NOVA Spektrum, Lillestrøm</span>
+            <span>Hall D · Stand D02-24</span>
+          </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">Scroll<span></span></div>
+      </section>
+
+      <section class="pillars" id="atelier">
+        <header class="pillars-intro">
+          <p class="kicker">The atelier</p>
+          <h2>Three points</h2>
+        </header>
+
+        <div class="pillars-grid">
+          <article class="pillar">
+            <div class="pillar-mark infinity-mark" aria-hidden="true">
+              <svg class="infinity" viewBox="0 0 80 48" fill="none">
+                <defs>
+                  <linearGradient id="infinity-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="40" y2="0" spreadMethod="repeat">
+                    <stop offset="0" stop-color="#d9cbb8" />
+                    <stop offset="0.25" stop-color="#8c4a2f" />
+                    <stop offset="0.5" stop-color="#3f3b36" />
+                    <stop offset="0.75" stop-color="#1c1a17" />
+                    <stop offset="1" stop-color="#d9cbb8" />
+                    <animate attributeName="x1" values="0;40" dur="7s" repeatCount="indefinite" />
+                    <animate attributeName="x2" values="40;80" dur="7s" repeatCount="indefinite" />
+                  </linearGradient>
+                </defs>
+                <circle class="infinity-base" cx="26" cy="24" r="20" />
+                <circle class="infinity-base" cx="54" cy="24" r="20" />
+                <circle class="infinity-flow" cx="26" cy="24" r="20" />
+                <circle class="infinity-flow" cx="54" cy="24" r="20" />
+              </svg>
+            </div>
+            <p class="pillar-index">01</p>
+            <h3>Infinite Colors</h3>
+            <div class="prose">
+              <p>
+                With our Infinite Colors service, you are able to create an exclusive and unique rug. Designed and produced to ensure a perfect harmony between design and space.
+              </p>
+              <p>
+                Every Corvo rug can be fully customized. Clients may choose from our Open Palette or develop bespoke tones through Infinite Colors. Sizes and shapes are tailored to each project, including non-standard and architectural formats.
+              </p>
+            </div>
+          </article>
+
+          <article class="pillar">
+            <div class="pillar-mark wool-mark" aria-hidden="true">
+              <svg class="wool" viewBox="0 0 64 64" fill="none">
+                <circle class="wool-line" cx="30" cy="30" r="22" />
+                <path class="wool-line" d="M12 22C20 12 40 12 48 22" />
+                <path class="wool-line" d="M10 30C20 18 40 18 50 30" />
+                <path class="wool-line" d="M12 38C22 26 40 26 48 38" />
+                <path class="wool-line" d="M16 46C26 34 40 34 46 44" />
+                <path class="wool-line" d="M20 10C16 24 16 40 22 50" />
+                <path class="wool-line" d="M30 8C26 24 26 42 32 52" />
+                <path class="wool-line" d="M40 10C44 24 44 40 38 50" />
+                <path class="wool-line" d="M44 46C56 50 58 60 50 62C44 63 42 58 48 56" />
+              </svg>
+            </div>
+            <p class="pillar-index">02</p>
+            <h3>Unmatched raw materials</h3>
+            <div class="prose">
+              <p>
+                In the world of high-end luxury rugs, the difference between good and extraordinary begins with material. At Corvo, we take time with this choice. Every fiber is selected for how it feels, how it wears over time, and how it lives in a space, not just how it looks.
+              </p>
+              <p>
+                We work with a wide range of exceptional fibers — Lyocell, New Zealand wool, natural wool, jute, and internally developed silks — each chosen for tactile quality, durability, and visual depth.
+              </p>
+            </div>
+          </article>
+
+          <article class="pillar">
+            <div class="pillar-mark pace" aria-hidden="true">
+              <span class="pace-ring"></span>
+              <span class="pace-value">4–6</span>
+              <span class="pace-unit">weeks</span>
+            </div>
+            <p class="pillar-index">03</p>
+            <h3>Production speed</h3>
+            <div class="prose">
+              <p>
+                All Corvo rugs are made to order in Portugal, produced specifically for the client. As a bespoke atelier, lead times typically range from 4 to 6 weeks depending on design complexity, materials, and destination.
+              </p>
+              <p>
+                Estimated timelines are confirmed at the time of order — craftsmanship and material quality, at a pace rarely offered in handmade luxury.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="exposition-intro" id="exposition">
+        <p class="kicker">In exposition</p>
+        <h2>The rugs</h2>
+        <p class="prose">
+          Four pieces from the atelier, shown at Oslo Design Fair. Each rug is unique, exclusive, and carries the soul of its maker.
+        </p>
+      </section>
+
+      <article class="rug" id="verdant">
+        <div class="rug-heading">
+          <p class="kicker">Rugs</p>
+          <h2>Verdant</h2>
+        </div>
+        <button class="rug-visual" type="button" data-zoom="assets/img/verdant.jpg" aria-label="View Verdant in full screen">
+          <img src="assets/img/verdant.jpg" alt="Verdant rug, inspired by a watercolor by Ramiro Relvas, shown in landscape" />
+          <span class="zoom-hint">View · Zoom</span>
+        </button>
+        <div class="rug-copy">
+          <div class="prose">
+            <p>
+              Inspired by an original watercolor painting by Ramiro Relvas, Verdant embodies the perfect union of artistic vision and masterful craftsmanship. The composition faithfully preserves the essence of the original artwork, reinterpreting its expressive color fields, organic forms, and evocation of the natural landscape through a refined and contemporary textile language.
+            </p>
+            <p>
+              Conceived for the most discerning luxury interiors, Verdant explores the richness of color, texture, and sculptural relief, transforming the fluidity of watercolor into an exceptional woven masterpiece. The interplay of varying pile heights, intricate weaving techniques, and meticulously crafted finishes creates remarkable depth, allowing light, texture, and volume to interact in perfect harmony.
+            </p>
+            <p>
+              Remaining true to the creative legacy of Ramiro Relvas, this rug preserves the distinctive artistic identity, sensitivity, and visual language that define his original illustrations, elevating them into a new dimension of design and exclusivity. Every detail reflects an uncompromising commitment to excellence, innovation, and artisanal savoir-faire, resulting in a timeless creation that transcends decoration to become a true work of textile art.
+            </p>
+            <p>
+              Verdant is the expression of an artistic legacy transformed into contemporary luxury — a unique creation where nature, color, and craftsmanship converge to enrich the world’s most sophisticated interiors.
+            </p>
+          </div>
+          <ul class="meta">
+            <li><span>Designer</span> Tânia Resende</li>
+            <li><span>Produtor</span> Sorema</li>
+            <li><span>Material</span> Lyocell, Bamboo, Wool and Contract Lyocell</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-solid js-cal" href="https://cal.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+            <a class="btn js-product" data-product="verdant" href="https://www.corvo-rugs.com/products/verdant-rug" target="_blank" rel="noopener noreferrer">Purchase</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rug" id="gradient">
+        <div class="rug-heading">
+          <p class="kicker">Rugs</p>
+          <h2>Gradient</h2>
+        </div>
+        <button class="rug-visual is-studio" type="button" data-zoom="assets/img/gradient.png" aria-label="View Gradient in full screen">
+          <img src="assets/img/gradient.png" alt="Round Gradient rug in terracotta, charcoal and silver" />
+          <span class="zoom-hint">View · Zoom</span>
+        </button>
+        <div class="rug-copy">
+          <div class="prose">
+            <p>
+              A round rug is a celebration of balance and the softness of forms. Its organic silhouette lends fluidity to the space, creating a harmonious blend of design, comfort, and sophistication.
+            </p>
+            <p>
+              The delicate fusion of shades adds depth and subtlety to the piece, allowing light to reveal different nuances throughout the day. The result is an elegant and inviting presence, capable of transforming any space with natural grace and refinement.
+            </p>
+            <p>
+              Designed to be both a focal point and a source of serenity, this rug combines the excellence of craftsmanship with the timeless beauty of its materials, bringing a sense of gentle movement, comfort, and understated luxury to any interior.
+            </p>
+          </div>
+          <ul class="meta">
+            <li><span>Designer</span> Daniela Lima</li>
+            <li><span>Produtor</span> Sorema</li>
+            <li><span>Material</span> Lyocell</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-solid js-cal" href="https://cal.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+            <a class="btn js-product" data-product="gradient" href="https://www.corvo-rugs.com/products/gradient-terracota-rug" target="_blank" rel="noopener noreferrer">Purchase</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rug" id="atlantico">
+        <div class="rug-heading">
+          <p class="kicker">Rugs</p>
+          <h2>Atlântico</h2>
+        </div>
+        <button class="rug-visual is-studio" type="button" data-zoom="assets/img/atlantico.png" aria-label="View Atlântico in full screen">
+          <img src="assets/img/atlantico.png" alt="Atlântico rug with geometric waves dissolving into sea foam" />
+          <span class="zoom-hint">View · Zoom</span>
+        </button>
+        <div class="rug-copy">
+          <div class="prose">
+            <p>
+              The Atlântico rug is born from the essence of Corvo, a brand that forms part of an archipelago of luxury brands comprising Corvo, Graccioza, and Tercera — names inspired by the islands of the Azores, where nature reveals its strength, authenticity, and timeless beauty. Just as the islands that inspire their names, our brands are united by the Atlantic Ocean. It is the sea that surrounds them, defines their identity, and serves as their greatest source of inspiration: the serene power of nature, resilience through time, and enduring elegance.
+            </p>
+            <p>
+              The deep blue of the Atlantic, with its ever-changing shades and reflections, is expressed throughout this rug as a symbol of serenity, sophistication, and authenticity. Like the ocean that has shaped our islands, this piece has been created to stand the test of time, seamlessly combining tradition and innovation.
+            </p>
+            <p>
+              Wool is the defining material of this design. Natural, resilient, and exceptionally comfortable, it is one of the finest fibres available, valued for its durability, thermal insulation, and timeless beauty. To enhance the design with luminosity and depth, Atlântico also incorporates Lyocell, a naturally derived fibre distinguished by its subtle sheen and exceptionally silky touch. The combination of wool’s strength and the refined elegance of Lyocell creates a sophisticated interplay of textures and reflections, evoking the ever-changing surface of the ocean, where light is constantly transformed.
+            </p>
+            <p>
+              More than a rug, Atlântico is an expression of our identity — a tribute to the ocean that connects our brands, to the Azorean landscapes that inspire us, and to the excellence of Portuguese craftsmanship. A timeless creation designed to bring the tranquil strength of the Atlantic and the enduring sophistication of natural luxury into the world’s most refined interiors.
+            </p>
+          </div>
+          <ul class="meta">
+            <li><span>Designer</span> Rui Santos</li>
+            <li><span>Produtor</span> Sorema</li>
+            <li><span>Material</span> Wool &amp; Lyocell</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-solid js-cal" href="https://cal.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+            <a class="btn js-product" data-product="atlantico" href="https://www.corvo-rugs.com/pages/bespoke" target="_blank" rel="noopener noreferrer">Purchase</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rug" id="lagoon">
+        <div class="rug-heading">
+          <p class="kicker">Rugs</p>
+          <h2>Lagoon</h2>
+        </div>
+        <button class="rug-visual is-studio" type="button" data-zoom="assets/img/lagoon.png" aria-label="View Lagoon in full screen">
+          <img src="assets/img/lagoon.png" alt="Lagoon rug with a blue gradient and a sculptural central relief" />
+          <span class="zoom-hint">View · Zoom</span>
+        </button>
+        <div class="rug-copy">
+          <div class="prose">
+            <p>
+              Inspired by the vastness of the Atlantic Ocean, this rug pays homage to the power, movement, and timeless beauty of the sea that surrounds the Azores islands. Just as the Atlantic shapes the landscape with its energy and serenity, this piece captures that duality through a play of textures, reliefs, and varying pile heights.
+            </p>
+            <p>
+              Every detail has been carefully designed to evoke the movement of the waves, the depth of the waters, and the richness of the forms that nature creates over time. The varying pile heights create a unique tactile experience, lending depth and dynamism to the rug, while the different textures subtly capture the light, revealing new details with every glance.
+            </p>
+            <p>
+              More than just a decorative element, this rug invites us to feel the tranquil power of the Atlantic beneath our feet. A piece that celebrates the connection between nature, craftsmanship, and contemporary design, transforming the essence of the ocean into an expression of living art.
+            </p>
+          </div>
+          <ul class="meta">
+            <li><span>Designer</span> Rui Santos</li>
+            <li><span>Produtor</span> Sorema</li>
+            <li><span>Material</span> Lyocell</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-solid js-cal" href="https://cal.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+            <a class="btn js-product" data-product="lagoon" href="https://www.corvo-rugs.com/pages/bespoke" target="_blank" rel="noopener noreferrer">Purchase</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="brand">CORVO</p>
+        <p>Exclusive bespoke rugs. Proudly crafted in Portugal.</p>
+      </div>
+      <div>
+        <p>Oslo Design Fair · 31 August – 2 September 2026</p>
+        <p>Hall D, stand D02-24 · NOVA Spektrum, Lillestrøm</p>
+        <p>Mon 10–18 · Tue 10–18 · Wed 10–16</p>
+        <p><a href="https://www.corvo-rugs.com/" target="_blank" rel="noopener noreferrer">corvo-rugs.com</a></p>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Close">×</button>
+      <div class="lightbox-stage" id="lightbox-stage">
+        <img id="lightbox-image" alt="" />
+      </div>
+      <p class="lightbox-hint">Scroll or pinch to zoom · Drag to move</p>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

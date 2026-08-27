@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CORVO — Oslo QR codes</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ivory: #f4efe8;
+        --ink: #1c1a17;
+        --muted: #7a746c;
+        --line: rgba(28, 26, 23, 0.14);
+        --font: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: var(--font);
+        background: var(--ivory);
+        color: var(--ink);
+        padding: 3rem 4vw 4rem;
+      }
+      header { text-align: center; margin-bottom: 3rem; }
+      .brand {
+        letter-spacing: 0.46em;
+        font-weight: 200;
+        font-size: 1.2rem;
+      }
+      h1 {
+        font-weight: 200;
+        letter-spacing: 0.18em;
+        font-size: 1.6rem;
+        margin: 0.8rem 0 0.4rem;
+      }
+      p { font-weight: 300; color: var(--muted); font-size: 0.95rem; }
+      .sheet {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+      .card {
+        border: 1px solid var(--line);
+        padding: 2rem 1.4rem 1.6rem;
+        text-align: center;
+        background: #faf7f2;
+        break-inside: avoid;
+      }
+      .card img {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 1.1rem;
+        display: block;
+      }
+      .card h2 {
+        font-weight: 200;
+        letter-spacing: 0.22em;
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+      .url {
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        word-break: break-all;
+        color: var(--muted);
+      }
+      .print {
+        display: block;
+        margin: 2.5rem auto 0;
+        padding: 0.85rem 1.5rem;
+        border: 1px solid var(--ink);
+        background: transparent;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 0.68rem;
+        cursor: pointer;
+      }
+      @media print {
+        .print { display: none; }
+        body { padding: 0.6cm; }
+        .card { break-inside: avoid; }
+      }
+      @media (max-width: 700px) {
+        .sheet { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="brand">CORVO</p>
+      <h1>Oslo Design Fair</h1>
+      <p>Print this sheet. Each code opens the matching rug on the site.</p>
+    </header>
+    <div class="sheet" id="sheet"></div>
+    <button class="print" type="button" onclick="window.print()">Print</button>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/qrcode.min.js"></script>
+    <script>
+      (function () {
+        const base = (window.CORVO && window.CORVO.siteUrl) || window.location.origin;
+        const rugs = [
+          { id: "verdant", name: "Verdant" },
+          { id: "gradient", name: "Gradient" },
+          { id: "atlantico", name: "Atlântico" },
+          { id: "lagoon", name: "Lagoon" },
+        ];
+        const sheet = document.getElementById("sheet");
+        rugs.forEach(function (rug) {
+          const url = base.replace(/\/$/, "") + "/#" + rug.id;
+          const card = document.createElement("article");
+          card.className = "card";
+          const holder = document.createElement("div");
+          const h2 = document.createElement("h2");
+          h2.textContent = rug.name;
+          const p = document.createElement("p");
+          p.className = "url";
+          p.textContent = url;
+          card.appendChild(holder);
+          card.appendChild(h2);
+          card.appendChild(p);
+          sheet.appendChild(card);
+          new QRCode(holder, {
+            text: url,
+            width: 220,
+            height: 220,
+            colorDark: "#1c1a17",
+            colorLight: "#faf7f2",
+            correctLevel: QRCode.CorrectLevel.M,
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
