@@ -660,7 +660,7 @@ h3 {
 
 .rug-heading h2 {
   font-size: clamp(2.4rem, 6vw, 4.4rem);
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
 }
 
 .rug-copy {
