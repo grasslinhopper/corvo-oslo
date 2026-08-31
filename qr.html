@@ -53,17 +53,33 @@
         background: #faf7f2;
         break-inside: avoid;
       }
+      .card h2 {
+        font-weight: 200;
+        letter-spacing: 0.12em;
+        font-size: 1.6rem;
+        margin-bottom: 1.1rem;
+      }
       .card img {
         width: 220px;
         height: 220px;
         margin: 0 auto 1.1rem;
         display: block;
       }
-      .card h2 {
-        font-weight: 200;
-        letter-spacing: 0.22em;
-        font-size: 1.4rem;
-        margin-bottom: 0.4rem;
+      .downloads {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.9rem 1.4rem;
+        margin-top: 1.4rem;
+      }
+      .downloads a {
+        color: var(--ink);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.68rem;
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 0.15rem;
       }
       .url {
         font-size: 0.72rem;
@@ -83,9 +99,19 @@
         cursor: pointer;
       }
       @media print {
-        .print { display: none; }
-        body { padding: 0.6cm; }
-        .card { break-inside: avoid; }
+        .print, .downloads { display: none; }
+        body { padding: 0; }
+        header { margin-bottom: 1.2rem; }
+        .sheet { display: block; max-width: none; }
+        .card {
+          break-inside: avoid;
+          page-break-after: always;
+          min-height: 90vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .card:last-child { page-break-after: auto; }
       }
       @media (max-width: 700px) {
         .sheet { grid-template-columns: 1fr; }
@@ -96,10 +122,16 @@
     <header>
       <p class="brand">CORVO</p>
       <h1>Oslo Design Fair</h1>
-      <p>Print this sheet. Each code opens the matching rug on the site.</p>
+      <p>Each code opens that rug on oslo.corvorugs.com. Print-ready PDFs, one per rug, are in the print folder.</p>
+      <p class="downloads">
+        <a href="print/QR-Verdant.pdf">Verdant.pdf</a>
+        <a href="print/QR-Gradient.pdf">Gradient.pdf</a>
+        <a href="print/QR-Atlantico.pdf">Atlântico.pdf</a>
+        <a href="print/QR-Lagoon.pdf">Lagoon.pdf</a>
+      </p>
     </header>
     <div class="sheet" id="sheet"></div>
-    <button class="print" type="button" onclick="window.print()">Print</button>
+    <button class="print" type="button" onclick="window.print()">Print sheet</button>
     <script src="assets/js/config.js"></script>
     <script src="assets/js/qrcode.min.js"></script>
     <script>
@@ -122,8 +154,8 @@
           const p = document.createElement("p");
           p.className = "url";
           p.textContent = url;
-          card.appendChild(holder);
           card.appendChild(h2);
+          card.appendChild(holder);
           card.appendChild(p);
           sheet.appendChild(card);
           new QRCode(holder, {
